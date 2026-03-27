@@ -1,0 +1,14 @@
+models:
+  - name: stg_astrafy__raw_orders
+    columns:
+      - name: customers_id
+        data_tests:
+          - not_null
+
+  - name: stg_astrafy__raw_sales
+    columns:
+      - name: customer_id
+        data_tests:
+          - not_null
+      
+          

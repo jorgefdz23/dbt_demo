@@ -1,0 +1,10 @@
+sources:
+  - name: astrafy
+    database: astrafy-challenge-491418
+    schema: raw_data
+    tables:
+      - name: raw_orders
+        description: sales lines between 01-01-2022 and 31-12-2023 (1 line per order)
+
+      - name: raw_sales 
+        description: sales lines per product between 01-01-2022 and 31-12-2023 (1 line per order and per product)

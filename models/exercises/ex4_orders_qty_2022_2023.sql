@@ -1,3 +1,5 @@
+{{ config(materialized='table') }}
+
 select
     orders.*,
     sales.total_products as qty_product

@@ -1,0 +1,18 @@
+models:
+  - name: ex1_orders_2023
+    description: Number of orders in the year 2023
+  
+  - name: ex2_orders_per_month_2023
+    description: Number of orders per month in the year 2023
+
+  - name: ex3_avg_products_per_order_per_month_for_year_2023
+    description: Average number of products per order for each month of the year 2023
+
+  - name: ex4_orders_qty_2022_2023
+    description: Create a table (1 line per order) for all orders in the year 2022 and 2023 with the qty_product column that gives the quantity of products in the order
+
+  - name: ex5_order_segmentation
+    description: Returns the segmentation of orders in 2023 based on the number of previous orders in the past 12 months.
+  
+  - name: ex6_order_segmentation_2023
+    description: All orders of the year 2023 only; with an additional column named the order_segmentation

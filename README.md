@@ -14,14 +14,17 @@ This folder contains the data modeling structure used in dbt.
 
 #### 📌 Models:
 - **staging:**
+    - Includes: Source definitions (_scr_astrafy.yml).
+- **staging:**
     - Initial transformation layer for raw data.
-    - Includes: Source definitions (sources.yml) and basic cleaning and standardization
+    - Includes: Definitions (_stg_astrafy.yml) and basic cleaning and standardization
 - **exercises:**
     - SQL models created to solve specific analytical objectives.
-    - Includes: Source definition (sources.yml) for each sql model.
+    - Includes: Definition (exercises_doc.yml) for each sql model.
 - **datamarts:**
     - Final analytical tables used for reporting.
     - These models: Combine transformed data, apply business logic and include features such as customer segmentation
+    - Includes: Definitions (_datamarts.yml) for each column per table
 
 #### ⚙️ dbt_project.yml: 
 Main configuration file for the dbt project.
@@ -32,7 +35,7 @@ Due to the need for a paid GCP Looker instance, the model was developed using th
 Includes views for:
 - orders
 - sales
-- Contains a generic connection as a reference (no active Looker instance was used).
+- ecommerce.model.lkml (no active Looker instance was used).
  <br>
  
 ## 🗄️ Data Architecture in BigQuery

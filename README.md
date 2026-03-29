@@ -40,16 +40,19 @@ Includes views for:
 ### Raw Data:
 Data provided in Excel format (.xlsx) and converted to CSV for ingestion.
 All fields were loaded as strings to preserve the original data integrity.
+
 <img width="415" height="127" alt="image" src="https://github.com/user-attachments/assets/9ff0040b-3dad-4a4b-8706-5bbd26f4488c" />
 
 ### Exercises:
 Tables and views created using dbt.
 Each model addresses a specific analytical use case.
+
 <img width="415" height="264" alt="image" src="https://github.com/user-attachments/assets/23056280-f6b8-4e51-9f3c-cd9904f0ff61" />
 
 ### Looker Tables (Datamarts):
 Final tables used for dashboarding.
 Result from: Transformation of raw data and dbt models.
+
 <img width="415" height="126" alt="image" src="https://github.com/user-attachments/assets/0ef965bd-ed21-49a9-8035-d5c96197837f" />
  <br>
 

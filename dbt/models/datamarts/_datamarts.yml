@@ -1,0 +1,43 @@
+models:
+  - name: locker_orders
+    description: Order-level mart with customer recency segmentation over the trailing 12 months.
+    columns:
+      - name: order_id
+        description: Unique identifier of the order.
+        data_tests:
+          - not_null
+          - unique
+      - name: customer_id
+        description: Unique identifier of the customer.
+        data_tests:
+          - not_null
+      - name: date
+        description: Date of the order.
+      - name: net_sales
+        description: Net sales amount of the order.
+      - name: segment
+        description: Customer segment at order time based on prior 12-month order count.
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['New', 'Returning', 'VIP']
+
+  - name: locker_sales
+    description: Product-line mart containing cleaned sales records.
+    columns:
+      - name: order_id
+        description: Unique identifier of the order.
+        data_tests:
+          - not_null
+      - name: product_id
+        description: Unique identifier of the product.
+        data_tests:
+          - not_null
+      - name: customer_id
+        description: Unique identifier of the customer.
+      - name: date
+        description: Date on which the sales line was recorded.
+      - name: qty
+        description: Quantity purchased for the product line.
+      - name: net_sales
+        description: Net sales amount for the product line.

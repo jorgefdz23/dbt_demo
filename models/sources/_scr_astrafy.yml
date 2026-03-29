@@ -1,0 +1,34 @@
+sources:
+  - name: astrafy
+    database: astrafy-challenge-491418
+    schema: raw_data
+    description: Raw landing schema containing order-level and order-line sales exports.
+    tables:
+      - name: raw_orders
+        description: One row per order between 2022-01-01 and 2023-12-31.
+        columns:
+          - name: orders_id
+            description: Natural order identifier in the source extract.
+          - name: customers_id
+            description: Natural customer identifier in the source extract.
+          - name: date
+            description: Order date represented as a text field.
+          - name: net_sales
+            description: Net sales amount represented as localized text.
+
+      - name: raw_sales
+        description: One row per product per order between 2022-01-01 and 2023-12-31.
+        columns:
+          - name: order_id
+            description: Natural order identifier in the source extract.
+          - name: customer_id
+            description: Natural customer identifier in the source extract.
+          - name: products_id
+            description: Natural product identifier in the source extract.
+          - name: date
+            description: Order-line date represented as a text field.
+          - name: qty
+            description: Quantity represented as a text field.
+          - name: net_sales
+            description: Net sales amount represented as localized text.
+

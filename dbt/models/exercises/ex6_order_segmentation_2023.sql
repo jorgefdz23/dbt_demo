@@ -1,10 +1,11 @@
-{{ config(materialized='table') }}
+{{ config(materialized='table') }} --configures the model to be materialized as a table
 
-select 
-    date_date,
-    customers_id,
-    orders_id,
+--this model is used to get the segmentation of orders in 2023
+select
+    date,
+    customer_id,
+    order_id,
     net_sales,
     segment
-from {{ ref('ex5_order_segmentation') }} 
-where extract(year from date_date) = 2023
+from {{ ref('ex5_order_segmentation') }} --refers to the exercise model
+where extract(year from date) = 2023 --selects only orders from 2023

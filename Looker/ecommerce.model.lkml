@@ -1,17 +1,16 @@
 # Generic connection
 connection: "pending_connection"
 
-# Include all view files from the views folder
-include: "/views/*.view.lkml"
+# Include all view files from the views folde
+include: "*.lkml"
 
-
-explore: sales_table {
-  join: orders_table {
+explore: sales {
+  label: "Sales"
+  description: "Product-line sales joined with order-level segmentation."
+  join: orders {
     type: left_outer
-    # Join condition based on the order_id key
-    sql_on: ${sales_table.order_id} = ${orders_table.order_id} ;;
-     # One order (sales) can have multiple rows in orders (products)
-    relationship: one_to_many
+    sql_on: ${sales.order_id} = ${orders.order_id} ;;
+    relationship: many_to_one
+    fields: [orders.segment]
   }
-
 }
